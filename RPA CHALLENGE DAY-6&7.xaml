@@ -1,0 +1,168 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="RPA_6_7" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="860.8,3015.2" sap2010:WorkflowViewState.IdRef="RPA_6_7_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="34">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Activities.Contracts</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="RPA_6_7" sap:VirtualizedContainerService.HintSize="871.2,2850.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dtEmpDetails" />
+      <Variable x:TypeArguments="x:Int32" Name="EmpVal" />
+      <Variable x:TypeArguments="x:String" Name="dtOp" />
+      <Variable x:TypeArguments="x:String" Name="StrPwd" />
+      <Variable x:TypeArguments="x:Int32" Name="EmpCode" />
+      <Variable x:TypeArguments="x:String" Name="EmpSalary" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[dtEmpDetails]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="829.6,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;EMPLOYEE_x0020_ID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;EMPLOYEE_x0020_NAME&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;EMPLOYEE_x0020_SALARY&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="829.6,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="IF YOU WANT TO ENTER DATA , TYPE 1 OR TYPE 2 : " Title="EMPLOYEE DETAILS">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:Int32">[EmpVal]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="829.6,1651.2" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+      <ui:InterruptibleDoWhile.Body>
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="794.4,1484" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <If Condition="[EmpVal=2]" sap:VirtualizedContainerService.HintSize="752.8,1391.2" sap2010:WorkflowViewState.IdRef="If_1">
+            <If.Then>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;THE VALUES ARE ENTERED SUCCESSFULLY!!!!!!!!!!!!!!&quot;]" />
+            </If.Then>
+            <If.Else>
+              <Sequence sap:VirtualizedContainerService.HintSize="375.2,1241.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="EmpName" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="333.6,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="PLEASE ENTER YOUR ID : " Title="EMPLOYEE CODE">
+                  <ui:InputDialog.Result>
+                    <OutArgument x:TypeArguments="x:Int32">[EmpCode]</OutArgument>
+                  </ui:InputDialog.Result>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InputDialog>
+                <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="333.6,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="PLEASE ENTER YOUR NAME : " Title="EMPLOYEE NAME">
+                  <ui:InputDialog.Result>
+                    <OutArgument x:TypeArguments="x:String">[EmpName]</OutArgument>
+                  </ui:InputDialog.Result>
+                </ui:InputDialog>
+                <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="333.6,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="PLEASE ENTER YOUR SALARY : " Title="EMPLOYEE SALARY">
+                  <ui:InputDialog.Result>
+                    <OutArgument x:TypeArguments="x:String">[EmpSalary]</OutArgument>
+                  </ui:InputDialog.Result>
+                </ui:InputDialog>
+                <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="333.6,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Label="IF YOU WANT TO ENTER AGAIN, TYPE 1 OR TYPE 2 : " Title="EMPLOYEE DETAILS">
+                  <ui:InputDialog.Result>
+                    <OutArgument x:TypeArguments="x:Int32">[EmpVal]</OutArgument>
+                  </ui:InputDialog.Result>
+                </ui:InputDialog>
+                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{EmpCode, EmpName, EmpSalary}]" DataTable="[dtEmpDetails]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+              </Sequence>
+            </If.Else>
+          </If>
+        </Sequence>
+      </ui:InterruptibleDoWhile.Body>
+      <ui:InterruptibleDoWhile.Condition>
+        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="EmpVal=1" />
+      </ui:InterruptibleDoWhile.Condition>
+    </ui:InterruptibleDoWhile>
+    <ui:OutputDataTable DataTable="[dtEmpDetails]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="829.6,22.4" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[dtOp]" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="829.6,60" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;THE EMPLOYEE DETAILS ARE : &quot;+ Environment.NewLine+dtOp]" />
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dtEmpDetails]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="829.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="C:\Users\DELL\Desktop\Employee.xlsx" />
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="829.6,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="s" KeyModifiers="Ctrl">
+      <ui:SendHotkey.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="2c29cebf-115d-4188-9540-17530ad0e2b8">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:SendHotkey.Target>
+    </ui:SendHotkey>
+    <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="829.6,22.4" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkv8EvqiHz06CCvgGJbZjZQAAAAACAAAAAAAQZgAAAAEAACAAAAAC1ANucKBfgfD8BMjFXhNgsIs/5Cz2pdhfHBsIZlfSSgAAAAAOgAAAAAIAACAAAABEQfu/EKf9XRW5H7FZnVYW/4dPgLSVwrkGFHoN4/xHJiAAAAC2ggfHlH3Cp9xH/jfwEqJQqGWOjIiCz1N6Easd4qGAUEAAAAAjO25bGYpYeJEfRU6LD7IBDDu3i89txjKALRH5jYzOH7hpPmXQdaPIqa9mMBuxYlELV6zB3xFABDisebxIuS2J" Result="[StrPwd]" />
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Body="HERE IS THE FILE WHICH CONTAINS THE DETAILS OF AN EMPLOYEE" DisplayName="Send SMTP Mail Message" Email="keerthanasivaraman2002@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="829.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[StrPwd]" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" Subject="HELLO!!!!" To="keerthanasivaraman2002@gmail.com">
+      <ui:SendMail.Files>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String">C:\Users\DELL\Desktop\Employee.xlsx</Literal>
+          </InArgument>
+        </scg:List>
+      </ui:SendMail.Files>
+    </ui:SendMail>
+  </Sequence>
+</Activity>
